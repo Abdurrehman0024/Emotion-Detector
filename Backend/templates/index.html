@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emotion Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gradient">
+  <header class="header">
+    <h1>😎 Emotion Detector</h1>
+
+  </header>
+
+  <div class="container">
+    <textarea id="textInput" placeholder="Type something you're feeling..."></textarea>
+    <button onclick="detectEmotion()">Detect Emotion</button>
+    
+    <div id="loader" class="loader" style="display: none;"></div>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

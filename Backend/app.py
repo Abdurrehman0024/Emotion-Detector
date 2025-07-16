@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import joblib
 
@@ -14,7 +14,7 @@ except Exception as e:
 
 @app.route('/')
 def home():
-    return "Emotion Detection API is running!"
+     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
